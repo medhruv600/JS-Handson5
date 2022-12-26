@@ -39,6 +39,30 @@
 
 
 
+    <h4>Q.2 Count the Heads</h4>
+    <pre>
+        var Count_Occ = (s) => {
+            let obj = {};
+            let str = "";
+            let r = s.split("").sort();
+            for (let i = 0; i < r.length; i++) {
+                if (obj[r[i]]) {
+                    obj[r[i]]++;
+                } else {
+                    obj[r[i]] = 1;
+                }
+            }
+            for (let key in obj) {
+                if (obj[key] > 1) {
+                    str += key + obj[key];
+                }
+            }
+            return str; 
+        };
+    </pre>
+
+
+
     <h4>Q.3 Count the Vowels</h4>
     <pre>
         var Count_Vowels= (S) => {
